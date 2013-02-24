@@ -10,4 +10,6 @@
 
 @interface MeteorDefenseViewController : UIViewController
 
+-(void) fireRocket: (CGFloat) x AndY: (CGFloat) y;
+
 @end

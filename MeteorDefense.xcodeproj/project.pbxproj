@@ -18,6 +18,10 @@
 		CE3B2CEB16D5B5280009B0D4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3B2CEA16D5B5280009B0D4 /* Default-568h@2x.png */; };
 		CE3B2CEE16D5B5280009B0D4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3B2CEC16D5B5280009B0D4 /* MainStoryboard.storyboard */; };
 		CE3B2CF116D5B5280009B0D4 /* MeteorDefenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B2CF016D5B5280009B0D4 /* MeteorDefenseViewController.m */; };
+		CE3B2CF916D5B59E0009B0D4 /* Meteors.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B2CF816D5B59E0009B0D4 /* Meteors.m */; };
+		CE3B2CFC16D5B5BA0009B0D4 /* Rockets.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B2CFB16D5B5BA0009B0D4 /* Rockets.m */; };
+		CE5C163B16DA4B020020D7FD /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5C163A16DA4B020020D7FD /* IntroViewController.m */; };
+		CE5C163E16DA554D0020D7FD /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5C163D16DA554D0020D7FD /* GameOverViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,14 @@
 		CE3B2CED16D5B5280009B0D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CE3B2CEF16D5B5280009B0D4 /* MeteorDefenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeteorDefenseViewController.h; sourceTree = "<group>"; };
 		CE3B2CF016D5B5280009B0D4 /* MeteorDefenseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeteorDefenseViewController.m; sourceTree = "<group>"; };
+		CE3B2CF716D5B59E0009B0D4 /* Meteors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteors.h; sourceTree = "<group>"; };
+		CE3B2CF816D5B59E0009B0D4 /* Meteors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meteors.m; sourceTree = "<group>"; };
+		CE3B2CFA16D5B5BA0009B0D4 /* Rockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rockets.h; sourceTree = "<group>"; };
+		CE3B2CFB16D5B5BA0009B0D4 /* Rockets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rockets.m; sourceTree = "<group>"; };
+		CE5C163916DA4B020020D7FD /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		CE5C163A16DA4B020020D7FD /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		CE5C163C16DA554D0020D7FD /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		CE5C163D16DA554D0020D7FD /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,14 @@
 				CE3B2CEC16D5B5280009B0D4 /* MainStoryboard.storyboard */,
 				CE3B2CEF16D5B5280009B0D4 /* MeteorDefenseViewController.h */,
 				CE3B2CF016D5B5280009B0D4 /* MeteorDefenseViewController.m */,
+				CE5C163916DA4B020020D7FD /* IntroViewController.h */,
+				CE5C163A16DA4B020020D7FD /* IntroViewController.m */,
+				CE5C163C16DA554D0020D7FD /* GameOverViewController.h */,
+				CE5C163D16DA554D0020D7FD /* GameOverViewController.m */,
+				CE3B2CF716D5B59E0009B0D4 /* Meteors.h */,
+				CE3B2CF816D5B59E0009B0D4 /* Meteors.m */,
+				CE3B2CFA16D5B5BA0009B0D4 /* Rockets.h */,
+				CE3B2CFB16D5B5BA0009B0D4 /* Rockets.m */,
 				CE3B2CDB16D5B5270009B0D4 /* Supporting Files */,
 			);
 			path = MeteorDefense;
@@ -177,6 +197,10 @@
 				CE3B2CE116D5B5270009B0D4 /* main.m in Sources */,
 				CE3B2CE516D5B5280009B0D4 /* MeteorDefenseAppDelegate.m in Sources */,
 				CE3B2CF116D5B5280009B0D4 /* MeteorDefenseViewController.m in Sources */,
+				CE3B2CF916D5B59E0009B0D4 /* Meteors.m in Sources */,
+				CE3B2CFC16D5B5BA0009B0D4 /* Rockets.m in Sources */,
+				CE5C163B16DA4B020020D7FD /* IntroViewController.m in Sources */,
+				CE5C163E16DA554D0020D7FD /* GameOverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +323,7 @@
 				CE3B2CF616D5B5280009B0D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
