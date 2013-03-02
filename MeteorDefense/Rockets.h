@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface Rockets : UIView
-
-@property float deltaX;
-@property float deltaY;
-@property float endX;
-@property float endY;
+@property CGFloat touchX, touchY, endX, endY, yIntercept, slope;
 
 -(id) initRocketWithSize: (CGFloat) rocketSize;
 

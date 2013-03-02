@@ -7,6 +7,7 @@
 //
 
 #import "IntroViewController.h"
+#import "IntroView.h"
 
 @interface IntroViewController ()
 
@@ -14,59 +15,70 @@
 
 @implementation IntroViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        UIView *introView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].applicationFrame];
-        introView.backgroundColor = [UIColor blackColor];
-        self.view = introView;
-        
-        CGRect titleFrame = CGRectMake(self.view.frame.origin.x + 10, self.view.frame.origin.y + 25, self.view.frame.size.width*3/4, self.view.frame.size.height/3);
-        UIView *title = [[UIView alloc] initWithFrame: titleFrame];
-        title.backgroundColor = [UIColor orangeColor];
-        
-        UILabel *gameLabel = [[UILabel alloc] initWithFrame:titleFrame];
-        gameLabel.backgroundColor = [UIColor clearColor];
-        gameLabel.textColor = [UIColor whiteColor];
-        gameLabel.font = [UIFont fontWithName:@"Helvetica" size:45];
-        gameLabel.text = @"Meteor Shower";
-        
-        [title addSubview:gameLabel];
-        [self.view addSubview:title];
-        
-        UILabel *tapToPlay = [[UILabel alloc] initWithFrame:titleFrame];
-        tapToPlay.center = CGPointMake(tapToPlay.frame.origin.x, self.view.frame.size.height*2/3);
-        tapToPlay.font = [UIFont fontWithName:@"Helvetica" size:30];
-        tapToPlay.text = @"Tap To Play";
-        tapToPlay.textColor = [UIColor whiteColor];
-        [self.view addSubview:tapToPlay];
-        
-        
-    }
-    return self;
-}
-
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:touch.view];
-    
-    [self performSegueWithIdentifier:@"segueToGame" sender:self];
-    
-}
-
-
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    printf("Prepare for Segue");
-    
-}
+UILabel *gameLabel;
+NSTimer *meteorTimer;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    IntroView *intro = [[IntroView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    self.view = intro;
+    
+    CGRect titleFrame = CGRectMake(self.view.frame.origin.x + 12, self.view.frame.origin.y + 25, self.view.frame.size.width, self.view.frame.size.height/3);
+     gameLabel = [[UILabel alloc] initWithFrame:titleFrame];
+     gameLabel.backgroundColor = [UIColor clearColor];
+     gameLabel.textColor = [UIColor whiteColor];
+     gameLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:40];
+     gameLabel.text = @"METEOR BLASTER";
+     
+     [self.view addSubview: gameLabel];
+    
+    CGRect labelFrame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width/4, self.view.frame.origin.y + self.view.frame.size.height/2, self.view.frame.size.width, self.view.frame.size.height/2);
+     UILabel *tapToPlay = [[UILabel alloc] initWithFrame:labelFrame];
+     tapToPlay.backgroundColor = [UIColor clearColor];
+     tapToPlay.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:30];
+     tapToPlay.text = @"Tap To Play";
+     tapToPlay.textColor = [UIColor whiteColor];
+     [self.view addSubview:tapToPlay];
+    
+    meteorTimer = [NSTimer scheduledTimerWithTimeInterval:60.0f/60.0f target:self selector:@selector(sendMeteor) userInfo:nil repeats:YES];
+}
+
+-(void) sendMeteor {
+    
+    CGFloat randomX = arc4random()%200;
+  
+    CGFloat screenHeight = [UIScreen mainScreen].applicationFrame.size.height;
+    
+    //UIImageView *newMeteor = [[UIImageView alloc] initWithFrame:CGRectMake(randomX, screenHeight, 150, 150)];
+    
+    UIImageView *newMeteor = [[UIImageView alloc] initWithFrame:CGRectMake(randomX, -200, 150, 150)];
+    
+    CGFloat endX = arc4random()%500;
+    
+    newMeteor.image = [UIImage imageNamed:@"meteor.png"];
+    newMeteor.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:newMeteor];
+    
+    [UIView animateWithDuration:5 delay:0 options:UIViewAnimationCurveLinear animations:^{
+       // CGFloat slope = (-50 - screenHeight)/(endX - randomX);
+        CGFloat slope = (screenHeight+200)/(endX - randomX);
+        
+        CGFloat yIntercept = screenHeight+200 - slope*endX;
+      
+        newMeteor.center = CGPointMake(endX, slope*endX + yIntercept);
+        
+    } completion:NULL];
+}
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    [meteorTimer invalidate];
+    
+    [self performSegueWithIdentifier:@"segueToGame" sender:self];
+    
 }
 
 - (void)didReceiveMemoryWarning

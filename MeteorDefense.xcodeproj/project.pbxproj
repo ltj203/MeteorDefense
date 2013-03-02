@@ -20,8 +20,13 @@
 		CE3B2CF116D5B5280009B0D4 /* MeteorDefenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B2CF016D5B5280009B0D4 /* MeteorDefenseViewController.m */; };
 		CE3B2CF916D5B59E0009B0D4 /* Meteors.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B2CF816D5B59E0009B0D4 /* Meteors.m */; };
 		CE3B2CFC16D5B5BA0009B0D4 /* Rockets.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B2CFB16D5B5BA0009B0D4 /* Rockets.m */; };
+		CE3E86EA16DB89130040B252 /* IntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E86E916DB89130040B252 /* IntroView.m */; };
+		CE5B78E016DF8E470017BF4E /* explosion-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5B78DF16DF8E470017BF4E /* explosion-hi.png */; };
 		CE5C163B16DA4B020020D7FD /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5C163A16DA4B020020D7FD /* IntroViewController.m */; };
-		CE5C163E16DA554D0020D7FD /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5C163D16DA554D0020D7FD /* GameOverViewController.m */; };
+		CED7F7DD16DC3AE800825A26 /* meteor2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CED7F7DC16DC3AE800825A26 /* meteor2.jpg */; };
+		CED7F7DF16DC3B2200825A26 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = CED7F7DE16DC3B2200825A26 /* meteor.png */; };
+		CED7F7E116DC4B1E00825A26 /* rocket.gif in Resources */ = {isa = PBXBuildFile; fileRef = CED7F7E016DC4B1E00825A26 /* rocket.gif */; };
+		CED7F7E316DC5A3F00825A26 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7F7E216DC5A3F00825A26 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +50,15 @@
 		CE3B2CF816D5B59E0009B0D4 /* Meteors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meteors.m; sourceTree = "<group>"; };
 		CE3B2CFA16D5B5BA0009B0D4 /* Rockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rockets.h; sourceTree = "<group>"; };
 		CE3B2CFB16D5B5BA0009B0D4 /* Rockets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rockets.m; sourceTree = "<group>"; };
+		CE3E86E816DB89130040B252 /* IntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroView.h; sourceTree = "<group>"; };
+		CE3E86E916DB89130040B252 /* IntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroView.m; sourceTree = "<group>"; };
+		CE5B78DF16DF8E470017BF4E /* explosion-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "explosion-hi.png"; sourceTree = "<group>"; };
 		CE5C163916DA4B020020D7FD /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		CE5C163A16DA4B020020D7FD /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
-		CE5C163C16DA554D0020D7FD /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
-		CE5C163D16DA554D0020D7FD /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		CED7F7DC16DC3AE800825A26 /* meteor2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meteor2.jpg; path = MeteorDefense/meteor2.jpg; sourceTree = "<group>"; };
+		CED7F7DE16DC3B2200825A26 /* meteor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meteor.png; path = MeteorDefense/meteor.png; sourceTree = "<group>"; };
+		CED7F7E016DC4B1E00825A26 /* rocket.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rocket.gif; sourceTree = "<group>"; };
+		CED7F7E216DC5A3F00825A26 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED7F7E316DC5A3F00825A26 /* QuartzCore.framework in Frameworks */,
 				CE3B2CD516D5B5270009B0D4 /* UIKit.framework in Frameworks */,
 				CE3B2CD716D5B5270009B0D4 /* Foundation.framework in Frameworks */,
 				CE3B2CD916D5B5270009B0D4 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +79,8 @@
 		CE3B2CC816D5B5270009B0D4 = {
 			isa = PBXGroup;
 			children = (
+				CED7F7DE16DC3B2200825A26 /* meteor.png */,
+				CED7F7DC16DC3AE800825A26 /* meteor2.jpg */,
 				CE3B2CDA16D5B5270009B0D4 /* MeteorDefense */,
 				CE3B2CD316D5B5270009B0D4 /* Frameworks */,
 				CE3B2CD216D5B5270009B0D4 /* Products */,
@@ -85,6 +98,7 @@
 		CE3B2CD316D5B5270009B0D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CED7F7E216DC5A3F00825A26 /* QuartzCore.framework */,
 				CE3B2CD416D5B5270009B0D4 /* UIKit.framework */,
 				CE3B2CD616D5B5270009B0D4 /* Foundation.framework */,
 				CE3B2CD816D5B5270009B0D4 /* CoreGraphics.framework */,
@@ -100,10 +114,12 @@
 				CE3B2CEC16D5B5280009B0D4 /* MainStoryboard.storyboard */,
 				CE3B2CEF16D5B5280009B0D4 /* MeteorDefenseViewController.h */,
 				CE3B2CF016D5B5280009B0D4 /* MeteorDefenseViewController.m */,
+				CE5B78DF16DF8E470017BF4E /* explosion-hi.png */,
+				CED7F7E016DC4B1E00825A26 /* rocket.gif */,
 				CE5C163916DA4B020020D7FD /* IntroViewController.h */,
 				CE5C163A16DA4B020020D7FD /* IntroViewController.m */,
-				CE5C163C16DA554D0020D7FD /* GameOverViewController.h */,
-				CE5C163D16DA554D0020D7FD /* GameOverViewController.m */,
+				CE3E86E816DB89130040B252 /* IntroView.h */,
+				CE3E86E916DB89130040B252 /* IntroView.m */,
 				CE3B2CF716D5B59E0009B0D4 /* Meteors.h */,
 				CE3B2CF816D5B59E0009B0D4 /* Meteors.m */,
 				CE3B2CFA16D5B5BA0009B0D4 /* Rockets.h */,
@@ -184,6 +200,10 @@
 				CE3B2CE916D5B5280009B0D4 /* Default@2x.png in Resources */,
 				CE3B2CEB16D5B5280009B0D4 /* Default-568h@2x.png in Resources */,
 				CE3B2CEE16D5B5280009B0D4 /* MainStoryboard.storyboard in Resources */,
+				CED7F7DD16DC3AE800825A26 /* meteor2.jpg in Resources */,
+				CED7F7DF16DC3B2200825A26 /* meteor.png in Resources */,
+				CED7F7E116DC4B1E00825A26 /* rocket.gif in Resources */,
+				CE5B78E016DF8E470017BF4E /* explosion-hi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +220,7 @@
 				CE3B2CF916D5B59E0009B0D4 /* Meteors.m in Sources */,
 				CE3B2CFC16D5B5BA0009B0D4 /* Rockets.m in Sources */,
 				CE5C163B16DA4B020020D7FD /* IntroViewController.m in Sources */,
-				CE5C163E16DA554D0020D7FD /* GameOverViewController.m in Sources */,
+				CE3E86EA16DB89130040B252 /* IntroView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

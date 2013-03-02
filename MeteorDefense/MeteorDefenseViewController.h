@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface MeteorDefenseViewController : UIViewController
 
--(void) fireRocket: (CGFloat) x AndY: (CGFloat) y;
+@property NSUInteger *score;
 
 @end
