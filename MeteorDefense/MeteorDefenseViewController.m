@@ -10,6 +10,7 @@
 #import "Meteors.h"
 #import "Rockets.h"
 #import "IntroView.h"
+#import "GameOverViewController.h"
 
 NSMutableArray *meteorArray;
 NSMutableArray *movingMeteors;
@@ -18,8 +19,8 @@ NSTimer *meteorTimer;
 UIImageView *ship;
 NSUInteger meteorCount=0;
 NSUInteger rocketCount=0;
-NSUInteger hits = 0;
-NSUInteger misses = 0;
+int hits = 0;
+int misses = 0;
 UILabel *scoreLabel;
 UIImageView *explosion;
 
@@ -55,7 +56,7 @@ UIImageView *explosion;
     }
     
     ship = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-100)/2, self.view.frame.size.height-100, 100, 100)];
-    ship.image = [UIImage imageNamed:@"rocket.gif"];
+    ship.image = [UIImage imageNamed:@"rocket.png"];
     ship.backgroundColor = [UIColor clearColor];
     [intro addSubview:ship];
     
@@ -72,6 +73,11 @@ UIImageView *explosion;
     
     meteorTimer = [NSTimer scheduledTimerWithTimeInterval:60.0f/60.0f target:self selector:@selector(sendMeteor) userInfo:nil repeats:YES];
     
+    [NSTimer scheduledTimerWithTimeInterval:7.0f/60.f target:self selector:@selector(removeExplosion) userInfo:nil repeats:YES];
+}
+
+-(void) removeExplosion {
+    [explosion removeFromSuperview];
 }
 
 -(void) sendMeteor {
@@ -85,7 +91,6 @@ UIImageView *explosion;
 
 -(void) moveMeteor {
     CGFloat endX = arc4random()%500;
-    [explosion removeFromSuperview];
     
     for (int i=0; i<movingMeteors.count-1; i++) {
         UIImageView *currentMeteor = [movingMeteors objectAtIndex:i];
@@ -148,7 +153,7 @@ UIImageView *explosion;
 
 -(void) moveRocket {
     
-    for (int i=0; i<rocketsArray.count-1; i++) {
+    for (int i=0; i<rocketsArray.count; i++) {
         Rockets *rocket = [rocketsArray objectAtIndex:i];
         [self.view addSubview: rocket];
         
@@ -167,7 +172,7 @@ UIImageView *explosion;
             newY = rocket.center.y -1;
         }
         
-        for (int j=0; j<movingMeteors.count-1; j++) {
+        for (int j=0; j<movingMeteors.count; j++) {
                 UIImageView *meteor = [movingMeteors objectAtIndex:j];
                 
                 if (CGRectIntersectsRect(meteor.frame, rocket.frame)) {
@@ -183,7 +188,7 @@ UIImageView *explosion;
                     score++;
                     scoreLabel.text = [NSString stringWithFormat:@"Hits: %i Misses: %i", hits, misses];
                     if (hits >= 20) {
-                        [self performSegueWithIdentifier:@"segueToOver" sender:self];
+                        
                     }
                     break;
                 }
@@ -192,17 +197,23 @@ UIImageView *explosion;
                     [movingMeteors removeObject:meteor];
                     misses++;
                     scoreLabel.text = [NSString stringWithFormat:@"Hits: %i Misses: %i", hits, misses];
-                    
-                    if (misses >= 20) {
-                        [self performSegueWithIdentifier:@"segueToOver" sender:self];
-                    }
                     break;
                 }
+            
+            score = hits*10 - misses*5;
+            if (hits + misses >=50) {
+                [self performSegueWithIdentifier:@"segueToOver" sender:self];
+            }
         }
     
         rocket.center = CGPointMake(rocket.center.x + deltaX, newY);
         
     }
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    GameOverViewController *controller = (GameOverViewController *)segue.destinationViewController;
+    controller.passedScore = score;
 }
 
 - (void)didReceiveMemoryWarning

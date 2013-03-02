@@ -51,9 +51,7 @@ NSTimer *meteorTimer;
   
     CGFloat screenHeight = [UIScreen mainScreen].applicationFrame.size.height;
     
-    //UIImageView *newMeteor = [[UIImageView alloc] initWithFrame:CGRectMake(randomX, screenHeight, 150, 150)];
-    
-    UIImageView *newMeteor = [[UIImageView alloc] initWithFrame:CGRectMake(randomX, -200, 150, 150)];
+    UIImageView *newMeteor = [[UIImageView alloc] initWithFrame:CGRectMake(randomX, -200, 100, 100)];
     
     CGFloat endX = arc4random()%500;
     
@@ -62,8 +60,8 @@ NSTimer *meteorTimer;
     
     [self.view addSubview:newMeteor];
     
-    [UIView animateWithDuration:5 delay:0 options:UIViewAnimationCurveLinear animations:^{
-       // CGFloat slope = (-50 - screenHeight)/(endX - randomX);
+    [UIView animateWithDuration:3 delay:0 options:UIViewAnimationCurveLinear animations:^{
+        
         CGFloat slope = (screenHeight+200)/(endX - randomX);
         
         CGFloat yIntercept = screenHeight+200 - slope*endX;

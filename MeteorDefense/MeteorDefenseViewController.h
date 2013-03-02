@@ -12,6 +12,6 @@
 
 @interface MeteorDefenseViewController : UIViewController
 
-@property NSUInteger *score;
+@property int score;
 
 @end

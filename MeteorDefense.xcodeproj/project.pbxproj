@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3AC14716E2A6B100A5218D /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC14616E2A6B100A5218D /* GameOverViewController.m */; };
+		CE3AC14916E2B51800A5218D /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3AC14816E2B51800A5218D /* rocket.png */; };
 		CE3B2CD516D5B5270009B0D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B2CD416D5B5270009B0D4 /* UIKit.framework */; };
 		CE3B2CD716D5B5270009B0D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B2CD616D5B5270009B0D4 /* Foundation.framework */; };
 		CE3B2CD916D5B5270009B0D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B2CD816D5B5270009B0D4 /* CoreGraphics.framework */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3AC14516E2A6B100A5218D /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		CE3AC14616E2A6B100A5218D /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		CE3AC14816E2B51800A5218D /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
 		CE3B2CD116D5B5270009B0D4 /* MeteorDefense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteorDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3B2CD416D5B5270009B0D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE3B2CD616D5B5270009B0D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,10 +119,13 @@
 				CE3B2CEC16D5B5280009B0D4 /* MainStoryboard.storyboard */,
 				CE3B2CEF16D5B5280009B0D4 /* MeteorDefenseViewController.h */,
 				CE3B2CF016D5B5280009B0D4 /* MeteorDefenseViewController.m */,
+				CE3AC14816E2B51800A5218D /* rocket.png */,
 				CE5B78DF16DF8E470017BF4E /* explosion-hi.png */,
 				CED7F7E016DC4B1E00825A26 /* rocket.gif */,
 				CE5C163916DA4B020020D7FD /* IntroViewController.h */,
 				CE5C163A16DA4B020020D7FD /* IntroViewController.m */,
+				CE3AC14516E2A6B100A5218D /* GameOverViewController.h */,
+				CE3AC14616E2A6B100A5218D /* GameOverViewController.m */,
 				CE3E86E816DB89130040B252 /* IntroView.h */,
 				CE3E86E916DB89130040B252 /* IntroView.m */,
 				CE3B2CF716D5B59E0009B0D4 /* Meteors.h */,
@@ -204,6 +212,7 @@
 				CED7F7DF16DC3B2200825A26 /* meteor.png in Resources */,
 				CED7F7E116DC4B1E00825A26 /* rocket.gif in Resources */,
 				CE5B78E016DF8E470017BF4E /* explosion-hi.png in Resources */,
+				CE3AC14916E2B51800A5218D /* rocket.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +230,7 @@
 				CE3B2CFC16D5B5BA0009B0D4 /* Rockets.m in Sources */,
 				CE5C163B16DA4B020020D7FD /* IntroViewController.m in Sources */,
 				CE3E86EA16DB89130040B252 /* IntroView.m in Sources */,
+				CE3AC14716E2A6B100A5218D /* GameOverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
